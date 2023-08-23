@@ -35,6 +35,8 @@ function fetchData()
         };
     }
 
+    data["web_app_name"] = "user_registration";
+
     return data;
 }
 
