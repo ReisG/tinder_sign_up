@@ -13,6 +13,7 @@ function fetchData()
         let passport_number = Number(passport.split(" ")[1]);
 
         data = {
+            "user_type" : MODE,
             "first_name" : document.getElementById("first_name").value,
             "last_name" : document.getElementById("last_name").value,
             "fathers_name" : document.getElementById("fathers_name").value,
@@ -26,6 +27,7 @@ function fetchData()
     else if (MODE == "urid")
     {
         data = {
+            "user_type" : MODE,
             "name" : document.getElementById("name"),
             "ogrn" : Number(document.getElementById("ogrn")),
             "address" : document.getElementById("address"),
