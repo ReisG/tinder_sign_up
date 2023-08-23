@@ -19,7 +19,7 @@ function fetchData()
             "fathers_name" : document.getElementById("fathers_name").value,
             "passport_series" : passport_series,
             "passport_number" : passport_number, 
-            "address" : document.getElementById("address"),
+            "address" : document.getElementById("address").value,
             "inn" : Number(document.getElementById("inn").value),
             "phone_number" : document.getElementById("phone_number").value
         };
@@ -28,10 +28,10 @@ function fetchData()
     {
         data = {
             "user_type" : MODE,
-            "name" : document.getElementById("name"),
-            "ogrn" : Number(document.getElementById("ogrn")),
-            "address" : document.getElementById("address"),
-            "inn" : document.getElementById("inn")
+            "name" : document.getElementById("name").value,
+            "ogrn" : Number(document.getElementById("ogrn").value),
+            "address" : document.getElementById("address").value,
+            "inn" : document.getElementById("inn").value
         };
     }
 
