@@ -25,7 +25,12 @@ function sendData()
     }
     else if (MODE == "urid")
     {
-        
+        data = {
+            "name" : document.getElementById("name"),
+            "ogrn" : Number(document.getElementById("ogrn")),
+            "address" : document.getElementById("address"),
+            "inn" : document.getElementById("inn")
+        };
     }
 
     return data;
