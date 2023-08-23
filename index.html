@@ -18,9 +18,12 @@
         <button id="FaceF">Как физическое лицо</button>
         <script src="./scripts/tgConnect.js"></script>
         <script>
+            var MODE = "n/a";
+        </script>
+        <script>
             const buttonF = document.getElementById('FaceF');
             buttonF.addEventListener('click', function() {
-                var MODE = "phis";
+                MODE = "phis";
                 tg.MainButton.show();
                 document.body.innerHTML = '<p id="send">Регистрация</p>'+
                 '<form action="">'+
@@ -61,7 +64,7 @@
         <script>
             const buttonU = document.getElementById('FaceU');
             buttonU.addEventListener('click', function() {
-                var MODE = "urid";
+                MODE = "urid";
                 tg.MainButton.show();
                 document.body.innerHTML = '<p id="send">Регистрация</p>'+
                 '<form action="">'+
