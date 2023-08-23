@@ -41,6 +41,7 @@ function fetchData()
 function sendData()
 {
     let data = fetchData();
+    alert(data);
     tg.sendData(JSON.stringify(data));
 }
 
