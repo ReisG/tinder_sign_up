@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Oborydovanue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p id="send">Оборудование</p>
+    <form action="Glavnaya.html">
+        <div class="LogIn">
+            <div class="div">
+                <p>Устройство:</p>
+                <select id="first">
+                    <option value="option0">Не выбрано</option>
+                    <option value="option1">Генерирующие оборудование</option>
+                    <option value="option2">Накопитель</option>
+                    <option value="option3">Преобразователь</option>
+                </select>
+            </div>
+            <div class="div">
+                <p>Тип устройства:</p>
+                <select id="second">
+                    <option value="default">Выберите устройство выше</option>
+                </select>
+            </div>
+            <script>
+                const firstDropdown = document.getElementById("first");
+                const secondDropdown = document.getElementById("second");
+              
+                firstDropdown.addEventListener("change", function() {
+                  const selectedValue = firstDropdown.value;
+                  let options = [];
+              
+                  if (selectedValue === "option1") {
+                    options = ["Солнечные панели", "Дизельный генератор", "Ветряной генератор", "Гидрогенератор"];
+                  } else if (selectedValue === "option2") {
+                    options = ["Накопитель энергии", "Электромобиль"];
+                  } else if (selectedValue === "option3") {
+                    options = ["Инвертор", "Активный фильтр"];
+                  } else if (selectedValue === "option0") {
+                    options = ["Выберите устройство выше"]
+                  }
+              
+                  secondDropdown.innerHTML = "";
+                  options.forEach(function(option) {
+                    const optionElement = document.createElement("option");
+                    optionElement.value = option;
+                    optionElement.text = option;
+                    secondDropdown.appendChild(optionElement);
+                  });
+                });
+              </script>
+            <div class="div">
+                <p>Модель:</p>
+                <input type="text">
+            </div>
+            <div class="div">
+                <p>Номер сертификата:</p>
+                <input type="text" maxlength="6" minlength="6">
+            </div>
+            <div class="div">
+                <p>Генерирующая мощность:</p>
+                <input type="text">
+            </div>
+            <div class="div">
+                <p>Ёмкость (для накопителей):</p>
+                <input type="text">
+            </div>
+            <div class="div">
+                <p>Дата установки:</p>
+                <input type="date">
+            </div>
+            <div class="div">
+               <p>Срок эксплуатации:</p>
+               <input type="text">
+             </div>
+             <div class="div">
+                <p>Статус:</p>
+                <select>
+                    <option>В работе</option>
+                    <option>В ремонте</option>
+                </select>
+            </div>
+        </div>
+        <input class="send" type="submit" value="Зарегистрировать">
+    </from>
+</body>
+</html>

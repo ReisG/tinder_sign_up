@@ -18,7 +18,39 @@
             const buttonF = document.getElementById('FaceF');
             buttonF.addEventListener('click', function() {
                 var MODE = "phis";
-                document.body.innerHTML = '<p id="send">Регистрация</p><form action=""><div class="LogIn"><div class="div"><p class="p">Фамилия</p><input type="text"></div><div class="div"><p class="p">Имя</p><input type="text"></div><div class="div"><p class="p">Отчество (при наличии)</p><input type="text"></div><div class="div"><p class="p">Серия и номер паспорта</p><input type="text" maxlength="11" minlength="11"></div><div class="div"><p class="p">Адрес</p><input type="text"></div><div class="div"><p class="p">ИНН</p><input type="text" maxlength="13" minlength="13"></div><div class="div"><p class="p">Номер контактного телефона</p><input type="tel" maxlength="12" minlength="11" class="input-1"></div></div></form>';
+                document.body.innerHTML = '<p id="send">Регистрация</p>'+
+                '<form action="">'+
+                    '<div class="LogIn">'+
+                        '<div class="div">'+
+                            '<p class="p">Фамилия</p>'+
+                            '<input type="text" id="first_name">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Имя</p>'+
+                            '<input type="text" id="last_name">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Отчество (при наличии)</p>'+
+                            '<input type="text" id="fethers_name">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Серия и номер паспорта</p>'+
+                            '<input type="text" maxlength="11" minlength="11" id="passport">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Адрес</p>'+
+                            '<input type="text" id="address">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">ИНН</p>'+
+                            '<input type="text" maxlength="13" minlength="13" id="inn">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Номер контактного телефона</p>'+
+                            '<input type="tel" maxlength="12" minlength="11" class="input-1" id="phone_number">'+
+                        '</div>'+
+                    '</div>'+
+                '</form>';
             });
         </script>
         <button id="FaceU">Как юридическое лицо</button>
@@ -26,7 +58,27 @@
             const buttonU = document.getElementById('FaceU');
             buttonU.addEventListener('click', function() {
                 var MODE = "urid";
-                document.body.innerHTML = '<p id="send">Регистрация</p><form action=""><div class="LogIn"><div class="div"><p class="p">Наименование по ЕГРЮЛ</p><input type="text"></div><div class="div"><p class="p">ОГРН</p><input type="text" maxlength="13" minlength="13"></div><div class="div"><p class="p">Адрес (указанный в ЕГР)</p><input type="text"></div><div class="div"><p class="p">ИНН</p><input type="text" maxlength="12" minlength="12"></div></div></form>';
+                document.body.innerHTML = '<p id="send">Регистрация</p>'+
+                '<form action="">'+
+                    '<div class="LogIn">'+
+                        '<div class="div">'+
+                            '<p class="p">Наименование по ЕГРЮЛ</p>'+
+                            '<input type="text" id="name">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">ОГРН</p>'+
+                            '<input type="text" maxlength="13" minlength="13" id="ogrn">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">Адрес (указанный в ЕГР)</p>'+
+                            '<input type="text" id="address">'+
+                        '</div>'+
+                        '<div class="div">'+
+                            '<p class="p">ИНН</p>'+
+                            '<input type="text" maxlength="12" minlength="12" id="inn">'+
+                        '</div>'+
+                    '</div>'+
+                '</form>';
             });
         </script>
     </div>
