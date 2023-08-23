@@ -21,7 +21,7 @@ function fetchData()
             "passport_number" : passport_number, 
             "address" : document.getElementById("address"),
             "inn" : Number(document.getElementById("inn").value),
-            "phone_number" : document.getElementById("phone_number")
+            "phone_number" : document.getElementById("phone_number").value
         };
     }
     else if (MODE == "urid")
